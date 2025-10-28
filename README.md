@@ -32,7 +32,7 @@ A arquitetura é modular e desenhada para escalabilidade.
 
 1.  Clone este repositório.
     ```bash
-    git clone https://github.com/BrunoMNoronha/hub-automacoes.git
+    git clone https://github.com/BrunoMNoronha/hub-integracao
     ```
 2.  Instale as dependências:
     ```bash
