@@ -1,0 +1,14 @@
+{
+  "name": "hub-de-automacoes",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "nova-api": "node scaffold.js create",
+    "deleta-api": "node scaffold.js delete"
+  },
+  "dependencies": {
+    "@vercel/kv": "^1.0.1"
+  },
+  "type": "module",
+  "engines": { "node": "20.x" }
+}

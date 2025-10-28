@@ -1,0 +1,42 @@
+## Módulo: TEMPLATE
+
+Este módulo integra o Hub com um serviço externo. Ele é criado via `npm run nova-api TEMPLATE` e renderiza:
+
+- `/api/TEMPLATE/action.js`: endpoint HTTP
+- `/lib/TEMPLATE/client.js`: lógica de negócio/autenticação
+- `/lib/TEMPLATE/README.md`: este manual (gerado a partir deste template)
+
+### Variáveis de Ambiente (Secrets)
+
+| Variável           | Descrição                                   |
+|--------------------|----------------------------------------------|
+| MY_API_BASE_URL    | URL base da API externa                      |
+| MY_API_KEY         | Token/segredo para autenticação (se houver)  |
+
+> Defina-as no Cofre da Vercel (Project Settings → Environment Variables). Nunca versione segredos.
+
+### Payload de Entrada (Input)
+Exemplo de corpo aceito pelo endpoint:
+
+```json
+{
+  "title": "Exemplo",
+  "content": "Conteúdo do post",
+  "meta": { "tags": ["hub", "vercel"] }
+}
+```
+
+### Resposta (Output)
+Shape sugerido:
+
+```json
+{
+  "ok": true,
+  "data": { "id": "abc123", "url": "https://..." }
+}
+```
+
+### Notas
+- Ajuste validação em `/api/TEMPLATE/action.js`.
+- Implemente autenticação e rotas reais em `/lib/TEMPLATE/client.js`.
+- Padronize mensagens de erro para facilitar o consumo pelo ChatGPT.
